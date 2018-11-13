@@ -16,7 +16,7 @@ class HashtagSearchContainer extends Component {
 
     getData = (term) => {
         getTwitterData('hashtagSearch', term).then(response => {
-            console.log(response);
+            this.setState({data: response.data});
         });
     }
 
@@ -24,7 +24,10 @@ class HashtagSearchContainer extends Component {
     render() {
         return (
             <div>
-                <HashtagSearch handleSearch={this.getData} />
+                <HashtagSearch 
+                    data={this.state.data}
+                    onSearch={this.getData}
+                />
             </div>
         );
     }

@@ -5,15 +5,21 @@ import Search from './Search';
 
 class HashtagSearch extends Component {
 
-    handleSearch = (e) => {
-        this.props.handleSearch(e);
+    renderItems = () => {
+        if (!this.props.data || this.props.data.length === 0) {
+            return null;
+        }
+        return this.props.data.map((item, index) => {
+            return <div key={index}>{item.likes}</div>
+        });
     }
 
 
     render() {
         return (
             <div>
-                <Search handleSearch={this.handleSearch} />
+                <Search onSearch={this.props.onSearch} />
+                {this.renderItems()}
             </div>
         );
     }

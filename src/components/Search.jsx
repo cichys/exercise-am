@@ -5,7 +5,7 @@ class Search extends Component {
 
     handleSearch = (e) => {
         e.preventDefault();
-        this.props.handleSearch(this.textInput.value);
+        this.props.onSearch(this.textInput.value);
     }
 
 
