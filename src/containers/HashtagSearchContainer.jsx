@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import getTwitterData from '../services/twitterService';
+import HashtagSearch from '../components/HashtagSearch';
 
 
 class HashtagSearchContainer extends Component {
@@ -13,13 +14,8 @@ class HashtagSearchContainer extends Component {
     }
 
 
-    componentDidMount() {
-        this.getData();
-    }
-
-
-    getData = () => {
-        getTwitterData('hashtagSearch', 'Python').then(response => {
+    getData = (term) => {
+        getTwitterData('hashtagSearch', term).then(response => {
             console.log(response);
         });
     }
@@ -28,7 +24,7 @@ class HashtagSearchContainer extends Component {
     render() {
         return (
             <div>
-                hashtag
+                <HashtagSearch handleSearch={this.getData} />
             </div>
         );
     }

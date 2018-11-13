@@ -9,7 +9,7 @@ class PageContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            pageToDisplay: 'cleaner'
+            pageToDisplay: 'hashtag'
         };
     }
 
