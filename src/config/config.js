@@ -4,5 +4,6 @@ export default {
         queryParams: '?pages_limit=3&wait=0',
         hashtagSearch: 'hashtags/%s',
         userSearch: 'users/%s'
-    }
+    },
+    itemsPerPage: 10
 };

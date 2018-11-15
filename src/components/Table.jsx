@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 class Table extends Component {
 
     renderRows = () => {
-        return this.props.data.map((el) => {
+        return this.props.data.map((el, index) => {
             return (
-                <tr key={el.id}>
+                <tr key={index}>
                     {this.renderCells(el)}
                 </tr>
             );
