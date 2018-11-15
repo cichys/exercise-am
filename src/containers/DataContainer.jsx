@@ -83,7 +83,7 @@ class DataContainer extends Component {
                     columns={this.dataToDisplay}
                 />
                 <Pagination
-                    totalItems={this.props.data.length}
+                    totalItems={this.data.length}
                     itemsPerPage={config.itemsPerPage}
                     currentPage={this.state.currentPage}
                     onChangePage={this.changePage}
