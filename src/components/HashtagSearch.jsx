@@ -1,25 +1,47 @@
 import React, { Component } from 'react';
 
 import Search from './Search';
+import Table from './Table';
 
 
 class HashtagSearch extends Component {
 
-    renderItems = () => {
-        if (!this.props.data || this.props.data.length === 0) {
-            return null;
+    dataToDisplay = [
+        {
+            key: 'text',
+            label: 'Tweet'
+        },
+        {
+            key: 'likes',
+            label: 'Likes'
+        },
+        {
+            key: 'replies',
+            label: 'Replies'
+        },
+        {
+            key: 'retweets',
+            label: 'Retweets'
+        },
+        {
+            key: 'hashtags',
+            label: 'Hashtags'
+        },
+        {
+            key: 'date',
+            label: 'Date'
         }
-        return this.props.data.map((item, index) => {
-            return <div key={index}>{item.likes}</div>
-        });
-    }
+    ];
 
 
     render() {
         return (
             <div>
                 <Search onSearch={this.props.onSearch} />
-                {this.renderItems()}
+                <Table
+                    data={this.props.data}
+                    columns={this.dataToDisplay}
+                />
             </div>
         );
     }
