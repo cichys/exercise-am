@@ -7,7 +7,7 @@ import Utils from '../services/utils';
 import config from '../config/config';
 
 
-class HashtagSearch extends Component {
+class DataContainer extends Component {
 
     data = [];
     dataToDisplay = [
@@ -93,4 +93,4 @@ class HashtagSearch extends Component {
     }
 }
 
-export default HashtagSearch;
+export default DataContainer;
