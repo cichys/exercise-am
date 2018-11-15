@@ -6,9 +6,52 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background: #F9F9FB;
+    font-size: 13px;
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
+}
+
+
+header {
+    width: 100%;
+    height: 50px;
+    background: white;
+}
+
+header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    margin: 20px 20px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.search {
+    margin-top: 20px;
+}
+
+table {
+    background: white;
+    margin-top: 20px;
+}
+table tr td, table tr th {
+    padding: 5px;
+    font-size: 12px;
+}
+
+.pagination button {
+    background: white;
+    cursor: pointer;
+    border: 0;
+    font-size: 14px;
+    margin-right: 5px;
 }

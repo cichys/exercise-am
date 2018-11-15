@@ -11,7 +11,7 @@ class Search extends Component {
 
     render() {
         return (
-            <div>
+            <div className="search">
                 <input type="text" ref={(input) => this.textInput = input} placeholder="Search..." />
                 <button type="button" onClick={this.handleSearch}>Search</button>
             </div>
