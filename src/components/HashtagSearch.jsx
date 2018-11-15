@@ -35,7 +35,8 @@ class HashtagSearch extends Component {
         },
         {
             key: 'date',
-            label: 'Date'
+            label: 'Date',
+            format: val => Utils.parseDate(val)
         }
     ];
 
