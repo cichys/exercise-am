@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import getTwitterData from '../services/twitterService';
-import HashtagSearch from '../components/HashtagSearch';
+import HashtagSearch from './HashtagSearch';
 
 
 class HashtagSearchContainer extends Component {

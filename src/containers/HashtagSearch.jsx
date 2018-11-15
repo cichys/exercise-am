@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import Search from './Search';
-import Table from './Table';
-import Pagination from './Pagination';
+import Search from '../components/Search';
+import Table from '../components/Table';
+import Pagination from '../components/Pagination';
 import Utils from '../services/utils';
 import config from '../config/config';
 
