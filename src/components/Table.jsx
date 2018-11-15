@@ -15,7 +15,8 @@ class Table extends Component {
 
     renderCells = (row) => {
         return this.props.columns.map((el) => {
-            return <td key={el.key}>{row[el.key]}</td>
+            const data = el.format ? el.format(row[el.key]) : row[el.key];
+            return <td key={el.key}>{data}</td>
         });
     }
 
